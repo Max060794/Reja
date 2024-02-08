@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="frame">
+        <div class="main_frame">
+            <div class="left_frame">
+                <div class="left_1">
+                    <div class="left_img">
+                        <img src="images/profile.png"
+                        alt="" 
+                        width="156px"
+                        height="142px"
+                        />
+                    </div>
+                    <div class="left_name"><%=user.name%></div>
+                    <div class="left_1_3"><%=user.profession%></div>
+                    <div class="left_icons">
+                        <a class="link_href" href="">
+                            <div class="icon">
+                                <img src="/author/icon/Facebook.svg" alt="" class="icon_1">
+                            </div>
+                        </a>
+                        <a class="link_href" href="">
+                            <div class="icon">
+                                <img src="/author/icon/Instagram.svg" alt="" class="icon_1">
+                            </div>
+                        </a>
+                        <a class="link_href" href="">
+                            <div class="icon">
+                                <img src="/author/icon/Twitter.svg" alt="" class="icon_1">
+                            </div>
+                        </a>
+                        <a class="link_href" href="">
+                            <div class="icon">
+                                <img src="/author/icon/Linkeding.svg" alt="" class="icon_1">
+                            </div>
+                        </a>
+                        <a class="link_href" href="">
+                            <div class="icon">
+                                <img src="/author/icon/Youtube.svg" alt="" class="icon_1">
+                            </div>
+                        </a>
+                        <a class="link_href" href="">
+                            <div class="icon">
+                                <img src="/author/icon/Dribbble.svg" alt="" class="icon_1">
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="marginer"></div>
+                <div class="left_2">
+                    <div class="left_2_2">
+                        <h3>Age:</h3><p><%=user.age%></p>
+                    </div>
+                    <div class="left_2_2">
+                        <h3>Residence:</h3><p><%=user.residence%></p>
+                    </div>
+                    <div class="left_2_2">
+                        <h3>Freelance:</h3><p style="color: #7EB942"><%=user.freelance%></p>
+                    </div>
+                    <div class="left_2_2">
+                        <h3>Address:</h3><p><%=user.adress%></p>
+                    </div>
+                </div>
+                <div class="marginer"></div>
+                <div class="left_3">
+                    <div class="left_3_h3">Languages</div>
+                    <div class="lang_left">
+                        <div class="label"><%=user.languages[0]%></div>
+                        <div class="percent">100%</div>
+                    </div>
+                        <div class="progress" style="height: 8px; border: 1px solid #FFB400; padding: 1.5px;">
+                            <div class="progress-bar w-100 bg-warning" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    <div class="lang_left">
+                        <div class="label"><%=user.languages[1]%></div>
+                        <div class="percent">75%</div>
+                    </div>
+                        <div class="progress" style="height: 8px; border: 1px solid #FFB400; padding: 1.5px;">
+                        <div class="progress-bar w-75 bg-warning" role="progressbar" style="width: 75%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div> 
+                    <div class="lang_left">
+                        <div class="label"><%=user.languages[2]%></div>
+                        <div class="percent">60%</div>
+                    </div>
+                        <div class="progress" style="height: 8px; border: 1px solid #FFB400; padding: 1.5px;">
+                        <div class="progress-bar w-60 bg-warning" role="progressbar" style="width: 60%;" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                </div>
+                <div class="marginer"></div>
+                <div class="left_4">
+                    <div class="left_4_h4">Skills</div>
+                    <div class="lang_left">
+                        <div class="label"><%=user.skills[0]%></div>
+                        <div class="percent">100%</div>
+                    </div>
+                    <div class="progress" style="height: 8px; border: 1px solid #FFB400; padding: 1.5px;">
+                        <div class="progress-bar w-100 bg-warning" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                    <div class="lang_left">
+                        <div class="label"><%=user.skills[1]%></div>
+                        <div class="percent">90%</div>
+                    </div>
+                    <div class="progress" style="height: 8px; border: 1px solid #FFB400; padding: 1.5px;">
+                        <div class="progress-bar w-90 bg-warning" style="width: 90%;" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                    <div class="lang_left">
+                        <div class="label"><%=user.skills[2]%></div>
+                        <div class="percent">70%</div>
+                    </div>
+                        <div class="progress" style="height: 8px; border: 1px solid #FFB400; padding: 1.5px;">
+                            <div class="progress-bar w-70 bg-warning" style="width: 70%;" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    <div class="lang_left">
+                        <div class="label"><%=user.skills[3]%></div>
+                        <div class="percent">60%</div>
+                    </div>
+                    <div class="progress" style="height: 8px; border: 1px solid #FFB400; padding: 1.5px;">
+                        <div class="progress-bar w-60 bg-warning" style="width: 60%;" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div> 
+                    <div class="lang_left">
+                        <div class="label"><%=user.skills[4]%></div>
+                        <div class="percent">40%</div>
+                    </div>
+                        <div class="progress" style="height: 8px; border: 1px solid #FFB400; padding: 1.5px;">
+                        <div class="progress-bar w-40 bg-warning" style="width: 40%;" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>   
+                </div>
+                <div class="marginer"></div>
+                <div class="left_5">
+                    <div class="left_5_h2"><h2>Extra Skills</h2></div>
+                    <div class="left_5_2">
+                        <img src="/author/icon/7777.svg" alt=""> <%=user.extra_skills[0]%>
+                    </div>
+                    <div class="left_5_2">
+                        <img src="/author/icon/7777.svg" alt=""> <%=user.extra_skills[1]%>
+                    </div>
+                    <div class="left_5_2">
+                        <img src="/author/icon/7777.svg" alt=""> <%=user.extra_skills[2]%>
+                    </div>
+                    <div class="left_5_2">
+                        <img src="/author/icon/7777.svg" alt=""> <%=user.extra_skills[3]%>
+                    </div>
+                </div>
+                <div class="marginer"></div>
+            </div>
+            <div class="midd_frame">
+                <div class="midd_box_1">
+                    <h1> Software Engineer in IT Company </h1>
+                    <p class="midd_p">Не волнуйтесь, если что-то не работает. Если бы всё работало, вас бы уволили.</p>
+                    <button>HIRE ME <img src="/author/btn_icon/Frame.svg" alt="#"></button>
+                    <img class="img_001" src="/author/box_images/001.svg" alt="">
+                    <img class="img_002" src="/author/box_images/002.svg" alt="">
+                    <img class="img_003" src="/author/box_images/003.svg" alt="">
+                    <img class="img_004" src="/author/box_images/004.svg" alt="">
+                    <img class="img_005" src="/author/box_images/005.svg" alt="">
+                    <img class="img_006" src="/author/box_images/006.svg" alt="">
+                    <img class="img_007" src="/author/box_images/007.svg" alt="">
+                    <img class="img_008" src="/author/box_images/008.svg" alt="">
+                </div>
+                <div class="midd_box_2">
+                    <div class="midd_h2">
+                    <h2>My Services</h2>
+                    <p>«Сегодня ты делаешь код, завтра код делает тебе деньги» <br> «Аккуратный программист — быстрый программист».</p>
+                    </div>
+                    <div class="midd_block">
+                        <div class="block_1">
+                            <img src="/author/box_images/coding.svg" alt="">
+                            <h3>Web Development</h3>
+                            <p>Blog,E-Commerce</p>
+                        </div>
+                        <div class="block_1">
+                            <img src="/author/box_images/illustration.svg" alt="">
+                            <h3>UI/UX Design</h3>
+                            <p>Mobile App, Website Design</p>
+                        </div>
+                        <div class="block_1">
+                            <img src="/author/box_images/Microphone.svg" alt="">
+                            <h3>Sound Design</h3>
+                            <p>Voice Over, Beat Making</p>
+                        </div>
+                        <div class="block_1">
+                            <img src="/author/box_images/game-development.svg" alt="">
+                            <h3>Game Design</h3>
+                            <p>Character Design, Props & Objects</p>
+                        </div>
+                        <div class="block_1">
+                            <img src="/author/box_images/Photographer.svg" alt="">
+                            <h3>Photography</h3>
+                            <p>Portrait, Product Photography</p>
+                        </div>
+                        <div class="block_1">
+                            <h3>Advertising</h3>
+                            <p style="width: 260px; height:105px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vitae nulla diam in ac dictum a urna viverra morbi. </p>
+                            <a href="" 
+                            style="font-family: 
+                            sans-serif; color:#FFB400; 
+                            font-size: 12px; 
+                            font-weight: bold;">ORDER NOW ></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="right_frame">
+                <div class="right_night">
+                    <a href="#"><img src="/author/icon/Contrast.svg" alt=""></a>
+                </div>
+                <div class="right_icons">
+                    <a href="#"><img src="/author/icon/Home.svg" alt=""></a>
+                    <a href="#"><img src="/author/icon/Service.svg" alt=""></a>
+                    <a href="#"><img src="/author/icon/Cv.svg" alt=""></a>
+                    <a href="#"><img src="/author/icon/Portfolio.svg" alt=""></a>
+                    <a href="#"><img src="/author/icon/Blog.svg" alt=""></a>
+                    <a href="#"><img src="/author/icon/Contact.svg" alt=""></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

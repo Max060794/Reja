@@ -1,24 +1,72 @@
-// Train Task-B
+//Shunday class tuzing tuzing nomi Shop, va uni constructoriga 3 hil mahsulot pass bolsin, hamda classning 3ta methodi bolsin, biri qoldiq, biri sotish va biri qabul. Har bir method ishga tushgan vaqt ham log qilinsin.
+//MASALAN: const shop = new Shop(4, 5, 2); shop.qoldiq() return hozir 20:40da 4ta non, 5ta lagmon va 2ta cola mavjud! shop.sotish('non', 3) & shop.qabul('cola', 4) & shop.qoldiq() return hozir 20:50da 1ta non, 5ta lagmon va 6ta cola mavjud!
 
-// Shunday function tuzing, u 1ta string parametrga ega bolsin, 
-// hamda osha stringda qatnashgan raqamlarni sonini bizga return qilsin.
 
-// MASALAN countDigits("ad2a54y79wet0sfgb9") 7ni return qiladi.
+class Shop {
+    constructor(non, cola, lagmon) {
+    this.non = non;
+    this.cola = cola;
+    this.lagmon = lagmon;
+    }
 
-function countNumber(string) {
-    let count = 0;
-
-    for (let i = 0; i < string.length; i++) {
-        
-        if (!isNaN(parseInt(string[i]))) {
-            count++;
-            }
-        }
-    return count;
+    qabul(type, num) {
+    if (type === "non") {
+        this.non = this.non + num;
+    } else if (type === "cola") {
+        this.cola = this.cola + num;
+    } else {
+        this.lagmon = this.lagmon + num;
+    }
+    }
+    sotish(type, num) {
+    if (type === "non") {
+        this.non = this.non - num;
+    } else if (type === "cola") {
+        this.cola = this.cola - num;
+    } else {
+        this.lagmon = this.lagmon - num;
+    }
+    }
+    qoldiq() {
+    return `hozir ${new Date().getHours()} : ${new Date().getMinutes()} da ${
+        this.non
+    } ta non, ${this.lagmon} ta lagmon va ${this.cola} ta cola mavjud!`;
+    }
 }
 
-const result = countNumber("ad2a54y79wet0sfgb9");
-console.log(result);
+const shop = new Shop(4, 5, 2);
+console.log(shop);
+
+
+
+
+
+
+
+
+
+
+// // Train Task-B
+
+// // Shunday function tuzing, u 1ta string parametrga ega bolsin, 
+// // hamda osha stringda qatnashgan raqamlarni sonini bizga return qilsin.
+
+// // MASALAN countDigits("ad2a54y79wet0sfgb9") 7ni return qiladi.
+
+// function countNumber(string) {
+//     let count = 0;
+
+//     for (let i = 0; i < string.length; i++) {
+        
+//         if (!isNaN(parseInt(string[i]))) {
+//             count++;
+//             }
+//         }
+//     return count;
+// }
+
+// const result = countNumber("ad2a54y79wet0sfgb9");
+// console.log(result);
 
 
 // Train Task-A

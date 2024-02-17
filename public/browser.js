@@ -1,9 +1,3 @@
-// const { default: axios } = require("axios");
-// const { response } = require("../app");
-
-// const { default: axios } = require("axios");
-
-
 console.log("FrontEnd JS ishga tushdi");
 
 function itemTemplate(item) {

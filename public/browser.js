@@ -17,7 +17,8 @@ function itemTemplate(item) {
 
 let createField = document.getElementById("create-field");
 
-document.getElementById("create-form").addEventListener("submit", function (e) {
+document.getElementById("create-form")
+.addEventListener("submit", function (e) {
     e.preventDefault();
 
     axios
@@ -34,13 +35,9 @@ document.getElementById("create-form").addEventListener("submit", function (e) {
         });
     });
 
-
-
-//     Delete
-
 document.addEventListener("click", function (e) {
     //delete oper
-    console.log(e.target);
+    // console.log(e.target);
     if (e.target.classList.contains("delete-me")) {
         if (confirm("Aniq ochirmoqchimisiz?")) {
             axios
@@ -58,7 +55,9 @@ document.addEventListener("click", function (e) {
 
     ////edit oper
     if (e.target.classList.contains("edit-me")) {
-        let userInput = prompt("O'zgartirish kiriting", e.target.parentElement.parentElement.querySelector(".item-text").innerHTML
+        let userInput = prompt(
+            "O'zgartirish kiriting", 
+            e.target.parentElement.parentElement.querySelector(".item-text").innerHTML
         );
         if (userInput) {
             axios
@@ -67,7 +66,9 @@ document.addEventListener("click", function (e) {
                 new_input: userInput,
             }).then(response => {
                 console.log(response.data);
-                e.target.parentElement.parentElement.querySelector(".item-text").innerHTML = userInput;
+                e.target.parentElement.parentElement
+                .querySelector(".item-text")
+                .innerHTML = userInput;
             }).catch(err => {
                 console.log("Iltimos qaytadan harakat qiling!");
             })
@@ -79,5 +80,5 @@ document.getElementById("clean-all").addEventListener("click", function () {
     axios.post("/delete-all", {delete_all: true }).then(respose => {
         alert(respose.data.state);
         document.location.reload();
-    })
+    });
 });

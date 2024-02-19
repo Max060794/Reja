@@ -1,19 +1,33 @@
-/*D-TASK: 
+// Shunday function tuzing, u bitta string argumentni qabul qilib osha stringni teskari qilib return qilsin.
+// MASALAN: getReverse("hello") return qilsin "olleh"
 
-Shunday function tuzing, u 2ta string parametr ega bolsin, 
-hamda agar har ikkala string bir hil harflardan iborat bolsa true aks holda false qaytarsin
-MASALAN checkContent("mitgroup", "gmtiprou") return qiladi true;
-*/
 
-function checkContent(str1, str2) {
-    const sortedStr1 = str1.split('').sort().join('');
-    const sortedStr2 = str2.split('').sort().join('');
-
-    return sortedStr1 === sortedStr2;
+function getReverse(inputStr) {
+    return inputStr.split('').reverse().join('');
 }
+var inputString = "hello";
+var result = getReverse(inputString);
+console.log(result);
 
-const result = checkContent("mitgroup", "gmtiprou");
-console.log(result); 
+
+
+
+// /*D-TASK: 
+
+// Shunday function tuzing, u 2ta string parametr ega bolsin, 
+// hamda agar har ikkala string bir hil harflardan iborat bolsa true aks holda false qaytarsin
+// MASALAN checkContent("mitgroup", "gmtiprou") return qiladi true;
+// */
+
+// function checkContent(str1, str2) {
+//     const sortedStr1 = str1.split('').sort().join('');
+//     const sortedStr2 = str2.split('').sort().join('');
+
+//     return sortedStr1 === sortedStr2;
+// }
+
+// const result = checkContent("mitgroup", "gmtiprou");
+// console.log(result); 
 
 
 

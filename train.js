@@ -19,4 +19,4 @@ function getHighestIndex(arr) {
 }
 const array = [5, 21, 12, 21, 8];
 const result = getHighestIndex(array);
-  console.log(result); // Вывод: 1
+console.log(result);

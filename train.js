@@ -1,17 +1,22 @@
-// Shunday findDoublers function tuzing, unga faqat bitta string argument pass bolib, 
-// agar stringda bir hil harf qatnashgan bolsa true, qatnashmasa false qaytarishi kerak.
+// Shunday function tuzingki unga integerlardan iborat array pass bolsin va function bizga 
+// osha arrayning eng katta qiymatiga tegishli birinchi indexni qaytarsin.
+// MASALAN: getHighestIndex([5, 21, 12, 21, 8]) return qiladi 1 sonini.
 
-// MASALAN: getReverse("hello") return true return qiladi
+function getHighestIndex(arr) {
+    if (arr.length === 0) {
+    return -1;
+    }
+    let maxIndex = 0;
+    let maxValue = arr[0];
 
-function findDoublers(str) {
-    str = str.toLowerCase();
-    
-    for (let i = 0; i < str.length; i++) {
-    if (str.indexOf(str[i], i + 1) !== -1) {
-        return true;
+    for (let i = 1; i < arr.length; i++) {
+    if (arr[i] > maxValue) {
+        maxValue = arr[i];
+        maxIndex = i;
+        }
     }
-    }
-    return false;
+    return maxIndex;
 }
-    console.log(findDoublers("hello"));
-
+const array = [5, 21, 12, 21, 8];
+const result = getHighestIndex(array);
+  console.log(result); // Вывод: 1
